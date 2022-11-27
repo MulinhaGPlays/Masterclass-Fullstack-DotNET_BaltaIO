@@ -38,7 +38,7 @@ namespace UtmBuilder.Pwa.ViewModels
             {
                 try 
 	            {
-                    var utm = new Utm(_websiteUrl, _id, _source, _medium, _name, _term, _content);
+                    var utm = new Utm(url:_websiteUrl, id:_id, source:_source, medium:_medium, name:_name, term:_term, content:_content);
                     return utm.ToString();
 	            }
 	            catch (Exception ex)

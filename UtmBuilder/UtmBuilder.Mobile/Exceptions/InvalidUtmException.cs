@@ -1,6 +1,8 @@
-﻿namespace UtmBuilder.Exceptions
+﻿using System;
+
+namespace UtmBuilder.Mobile.Exceptions
 {
-    public class InvalidUtmException : Exception
+    public class InvalidUtmException  : Exception
     {
         public InvalidUtmException(
             string message = "Invalid UTM parameters") : base(message)

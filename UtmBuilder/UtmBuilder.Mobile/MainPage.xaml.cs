@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using UtmBuilder.Mobile.ViewModels;
 using Xamarin.Forms;
 
 namespace UtmBuilder.Mobile
 {
     public partial class MainPage : ContentPage
     {
+        public MainPageViewModel ViewModel { get; set; } = new();
+
         public MainPage()
         {
             InitializeComponent();
+            this.BindingContext = ViewModel;
         }
     }
 }

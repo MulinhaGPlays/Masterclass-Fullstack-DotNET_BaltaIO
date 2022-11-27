@@ -23,7 +23,7 @@ namespace UtmBuilder
             string name)
         {
             Url = url;
-            Campaign = new Campaign(source, medium, name);
+            Campaign = new Campaign(source:source, medium:medium, name:name);
 
             if (!Regex.IsMatch(Url, UrlRegexPattern))
                 throw new InvalidUtmException("Invalid URL");
@@ -50,7 +50,7 @@ namespace UtmBuilder
             string? content = null)
         {
             Url = url;
-            Campaign = new Campaign(source, medium, name, id, term, content);
+            Campaign = new Campaign(source:source, medium:medium, name:name, id:id, term:term, content:content);
 
             if (!Regex.IsMatch(Url, UrlRegexPattern))
                 throw new InvalidUtmException("Invalid URL");
