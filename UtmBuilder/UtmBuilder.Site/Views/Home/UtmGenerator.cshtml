@@ -1,0 +1,64 @@
+﻿@model UtmBuilder.Site.Models.UtmModel
+
+@{
+    ViewData["Title"] = "Utm Generator";
+}
+
+<form method="post" action="UtmGenerator">
+    <div class="row g-3 align-items-center">
+        <div class="col-md-4">
+            <label asp-for="Url" class="col-form-label"></label>
+            <input asp-for="Url" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            <span asp-validation-for="Url" id="passwordHelpInline" class="form-text text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Id" class="col-form-label"></label>
+            <input asp-for="Id" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            <span asp-validation-for="Id" id="passwordHelpInline" class="form-text text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Source" class="col-form-label"></label>
+            <input asp-for="Source" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            <span asp-validation-for="Source" id="passwordHelpInline" class="form-text text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Medium" class="col-form-label"></label>
+            <input asp-for="Medium" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            <span asp-validation-for="Medium" id="passwordHelpInline" class="form-text text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Name" class="col-form-label"></label>
+            <input asp-for="Name" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            <span asp-validation-for="Name" id="passwordHelpInline" class="form-text text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Term" class="col-form-label"></label>
+            <input asp-for="Term" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            <span asp-validation-for="Term" id="passwordHelpInline" class="form-text text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Content" class="col-form-label"></label>
+            <input asp-for="Content" type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            <span asp-validation-for="Content" id="passwordHelpInline" class="form-text text-danger"></span>
+        </div>
+    </div>
+    <br />
+    @if (!String.IsNullOrEmpty(Model.Url))
+    {
+        <div class="alert @ViewBag.StyleType" role="alert" style="overflow-y:scroll">
+            <small>
+                @Model.Url
+            </small>
+        </div>
+    }
+    <br />
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Generate URL</button>
+    </div>
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
+
