@@ -1,0 +1,7 @@
+﻿<Application
+    x:Class="UtmBuilder.Mobile.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UtmBuilder.Mobile.UWP">
+
+</Application>
